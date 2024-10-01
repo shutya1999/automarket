@@ -1,0 +1,35 @@
+@use 'sass:math'
+
+// Variables
+@function rem($value)
+  $res: $value * 1.5 + rem
+  @return $res
+
+$padding_container: rem(20)
+
+
+@mixin bg-center
+  background-position: center
+  background-repeat: no-repeat
+  @content
+
+@mixin vh
+  height: calc(var(--vh, 1vh) * 100)
+
+
+
+@mixin scrollbar-styling
+  &::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 6px rgba(245, 246, 247, 1)
+    border-radius: 100px
+    background-color: rgba(245, 246, 247, 1)
+
+  &::-webkit-scrollbar
+    width: 8px
+    height: 8px
+    background-color: rgba(245, 246, 247, 1)
+
+  &::-webkit-scrollbar-thumb
+    border-radius: 100px
+    background-color: rgba(5, 97, 182, 1)
+

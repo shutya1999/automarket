@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Головна</title>
+
+    @@include('_style.html')
+</head>
+<body class="preload">
+
+
+@@include('_header.html')
+
+<div class="main" id="main">
+
+    <section class="home-header">
+        <div class="container">
+            <h1>
+                Auto müük ja otsimine: <br> lihtne, kiire, tulus
+            </h1>
+            <div class="header-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur. Amet vitae velit dui ut posuere turpis amet.
+                </p>
+            </div>
+
+            <form action="" method="post">
+                <div class="form-top">
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="car" name="transport-type" value="car" checked>
+                        <label for="car">
+                            <span class="icon-car"></span>
+                        </label>
+                    </div>
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="moto" name="transport-type" value="moto">
+                        <label for="moto">
+                            <span class="icon-moto"></span>
+                        </label>
+                    </div>
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="ship" name="transport-type" value="ship">
+                        <label for="ship">
+                            <span class="icon-ship"></span>
+                        </label>
+                    </div>
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="bus" name="transport-type" value="bus">
+                        <label for="bus">
+                            <span class="icon-bus"></span>
+                        </label>
+                    </div>
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="truck" name="transport-type" value="truck">
+                        <label for="truck">
+                            <span class="icon-truck"></span>
+                        </label>
+                    </div>
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="trailer" name="transport-type" value="trailer">
+                        <label for="trailer">
+                            <span class="icon-trailer"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="fields">
+                    <div class="form-group show-placeholder">
+                        <select name="" id="">
+                            <option value="-1">Keretüüp</option>
+                            <option value="0">Keretüüp - 1</option>
+                            <option value="1">Keretüüp - 2</option>
+                            <option value="2">Keretüüp - 3</option>
+                            <option value="3">Keretüüp - 4</option>
+                            <option value="4">Keretüüp - 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group show-placeholder">
+                        <select name="" id="">
+                            <option value="-1">Mark</option>
+                            <option value="0">Mark - 1</option>
+                            <option value="1">Mark - 2</option>
+                            <option value="2">Mark - 3</option>
+                            <option value="3">Mark - 4</option>
+                            <option value="4">Mark - 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group show-placeholder">
+                        <select name="" id="">
+                            <option value="-1">Mudelid</option>
+                            <option value="0">Mudelid - 1</option>
+                            <option value="1">Mudelid - 2</option>
+                            <option value="2">Mudelid - 3</option>
+                            <option value="3">Mudelid - 4</option>
+                            <option value="4">Mudelid - 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group show-placeholder">
+                        <select name="" id="">
+                            <option value="-1">Kütus</option>
+                            <option value="0">Kütus - 1</option>
+                            <option value="1">Kütus - 2</option>
+                            <option value="2">Kütus - 3</option>
+                            <option value="3">Kütus - 4</option>
+                            <option value="4">Kütus - 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Aasta alates">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Aasta kuni">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Hind alates">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Hind kuni">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="kW alates">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="kW kuni">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Läbisõit alates">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Läbisõit kuni">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Vedav sild">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Käigukast">
+                    </div>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" name="kaibemaksuga" id="kaibemaksuga">
+                    <label for="kaibemaksuga">Käibemaksuga</label>
+                </div>
+
+                <div class="btn-controls">
+                    <button type="submit" class="btn-primary">Tulemust</button>
+                    <button type="submit" class="btn-border">Detailsem otsing</button>
+                    <a href="" class="btn-link">Tühjenda filter</a>
+                </div>
+            </form>
+        </div>
+    </section>    
+
+
+    <section class="partners">
+        <div class="container">
+            <p class="partners-title">Meie partnerid</p>
+            <div class="imgs">
+                <picture>
+                    <source srcset="./img/components/partner-1.webp" type="image/webp">
+                    <img src="./img/components/partner-1.png" alt="" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./img/components/partner-2.webp" type="image/webp">
+                    <img src="./img/components/partner-2.png" alt="" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./img/components/partner-3.webp" type="image/webp">
+                    <img src="./img/components/partner-3.png" alt="" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./img/components/partner-4.webp" type="image/webp">
+                    <img src="./img/components/partner-4.png" alt="" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./img/components/partner-5.webp" type="image/webp">
+                    <img src="./img/components/partner-5.png" alt="" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <div class="home-about">
+        <div class="container">
+            <div class="left">
+                <h2 class="title">Meie kohta</h2>
+                <div class="desc">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Sed erat cum suspendisse amet neque duis. 
+                        Aenean ante tristique dictum adipiscing bibendum. Ante vitae dictumst tortor quisque. 
+                        Est et turpis iaculis duis pellentesque phasellus amet diam. 
+                        Augue facilisi egestas felis nam. Commodo volutpat aliquam eget ultricies blandit mauris arcu. 
+                        In praesent mauris aliquet gravida ultricies lacus nunc pharetra. 
+                        Quis sit fringilla urna non volutpat. Nisi platea vitae senectus euismod ut.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Vulputate odio ac quisque suspendisse et nisl. 
+                        Adipiscing risus at integer placerat ornare. Id gravida vel netus posuere quisque. 
+                        Convallis tristique ac diam mi faucibus dapibus amet vel.
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="img">
+                    <picture>
+                        <source srcset="./img/components/about-img-1.webp" type="image/webp">
+                        <img src="./img/components/about-img-1.jpg" alt="" loading="lazy">
+                    </picture>
+                </div>
+                <div class="stat">
+                    <p>+10 aastat </p>
+                    <p>kogemust</p>
+                </div>
+                <div class="img">
+                    <picture>
+                        <source srcset="./img/components/about-img-2.webp" type="image/webp">
+                        <img src="./img/components/about-img-2.jpg" alt="" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="how">
+        <div class="container">
+            <h2 class="title">Kuidas Automarket24 töötab</h2>
+
+            <div class="content">
+                <div class="img">
+                    <picture>
+                        <source srcset="./img/components/how-img.webp" type="image/webp">
+                        <img src="./img/components/how-img.jpg" alt="" loading="lazy">
+                    </picture>
+                </div>
+                <ul class="list">
+                    <li>
+                        <img src="./img/components/how-icon-1.svg" alt="" loading="lazy">
+                        <p class="list-title">Just need autod, mida soovite</p>
+                        <div class="list-text">
+                            <p>
+                                Automarket24 toetab laialdast atribuutide otsingu filtreerimist kütusetüübist salongi värvini. 
+                                Looge võrk kohapeal või kogu riigis.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/components/how-icon-2.svg" alt="" loading="lazy">
+                        <p class="list-title">Sirvi tulemusi</p>
+                        <div class="list-text">
+                            <p>
+                                Automarket24 pakub miljoneid kirjeid erinevatest allikatest. 
+                                Sirvige neid allika järgi või kõiki ühes loendis koos kõigi ootuspäraste sortimisvalikutega.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/components/how-icon-3.svg" alt="" loading="lazy">
+                        <p class="list-title">Otsige mis tahes seadmes</p>
+                        <div class="list-text">
+                            <p>
+                                Automarket24 töötab hästi teie brauseris – igas seadmes või iOS-i või Androidi rakendusena. 
+                                See tähendab, et saate oma telefonis, tahvelarvutis, sülearvutis või lauaarvutis kasutada 
+                                kõiki AutoTempesti võimsusi.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="reviews">
+        <div class="container">
+            <h2 class="title">Mida meie klient meie kohta räägib</h2>
+
+            <div class="swiper review-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide review-card">
+                        <div class="review-text">
+                            "Automarket24 on raskesti leitavate autode leidmisel väga abiks. 
+                            Väga mugav otsida paljudest allikatest korraga, et kuvada kena loend vaid ühe otsinguga."
+                        </div>
+                        <div class="reviewer">
+                            <picture>
+                                <source srcset="./img/components/reviewer-1.webp" type="image/webp">
+                                <img src="./img/components/reviewer-1.jpg" alt="" loading="lazy">
+                            </picture>
+                            
+                            <p class="name">Greg Smith</p>
+                            <p class="position">Atlanta, GA</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide review-card">
+                        <div class="review-text">
+                            "Teie veebisait on suurepärane ressurss ja järgmine kord, kui ma sõidukit otsin, 
+                            teen kindlasti Automarket24 oma esimeseks (ja viimaseks) kohaks, mida otsida."
+                        </div>
+                        <div class="reviewer">
+                            <picture>
+                                <source srcset="./img/components/reviewer-2.webp" type="image/webp">
+                                <img src="./img/components/reviewer-2.jpg" alt="" loading="lazy">
+                            </picture>
+                            
+                            <p class="name">Anna Harris </p>
+                            <p class="position">Bay Village, OH</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide review-card">
+                        <div class="review-text">
+                            "Automarket24 aitas mul leida otsitava maasturi. Säästsin aega AutoTempesti 
+                            kasutamisega võrreldes üksikute automüüjate veebisaitide külastamisega."
+                        </div>
+                        <div class="reviewer">
+                            <picture>
+                                <source srcset="./img/components/reviewer-3.webp" type="image/webp">
+                                <img src="./img/components/reviewer-3.jpg" alt="" loading="lazy">
+                            </picture>
+                            
+                            <p class="name">Sam Wither</p>
+                            <p class="position">Atlanta, GA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+             <div class="swiper-arrows">
+                <div class="swiper-arrow swiper-arrow-prev review-prev">
+                    <span class="icon-arrow-prev"></span>
+                </div>
+                <div class="swiper-arrow swiper-arrow-next review-next">
+                    <span class="icon-arrow-next"></span>
+                </div>
+             </div>
+            
+        </div>
+    </div>
+
+
+    <div class="about-banner">
+        <div class="container">
+            <div class="text">
+                <p>Tänu meie koostööpartneritele leiate kiiresti ja lihtsalt iga auto</p>
+            </div>
+            <a href="" class="btn-primary bg-white">Otsige autot</a>
+        </div>
+    </div>
+    
+    
+</div>
+
+
+@@include('_footer.html')
+
+@@include('_script.html')
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Головна</title>
+
+    <link rel="stylesheet" href="/cdn/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="./css/components.css?v=002">
+</head>
+<body class="preload">
+
+
+<header class="header-white" data-lp>
+    <div class="container">
+        <a href="" class="logo">
+            <svg width="107" height="12" viewBox="0 0 107 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M62.7257 4.77276C62.926 4.23875 63.2542 3.83824 63.7103 3.57123C64.1776 3.30422 64.6949 3.17072 65.2623 3.17072V5.57379C64.6059 5.49591 64.0163 5.62941 63.4934 5.9743C62.9816 6.31918 62.7257 6.89214 62.7257 7.69316V11.6816H60.573V3.3376H62.7257V4.77276Z" fill="black"/>
+                <path d="M74.2145 11.6816H71.7113L68.6741 7.89341V11.6816H66.5214V0H68.6741V7.00895L71.5444 3.3376H74.1144L70.7601 7.45953L74.2145 11.6816Z" fill="black"/>
+                <path d="M76.5051 8.39405C76.7943 9.43983 77.5787 9.96272 78.8581 9.96272C79.6813 9.96272 80.3044 9.68459 80.7271 9.12833L82.4627 10.1296C81.6394 11.32 80.4267 11.9152 78.8247 11.9152C77.4452 11.9152 76.3382 11.498 75.5038 10.6636C74.6694 9.82922 74.2522 8.77788 74.2522 7.50959C74.2522 6.25243 74.6638 5.20665 75.4871 4.37225C76.3104 3.52673 77.3673 3.10396 78.6578 3.10396C79.8816 3.10396 80.8884 3.52673 81.6783 4.37225C82.4794 5.21778 82.8799 6.26356 82.8799 7.50959C82.8799 7.78772 82.8521 8.08255 82.7964 8.39405H76.5051ZM76.4717 6.72526H80.7271C80.6047 6.15787 80.3489 5.7351 79.9595 5.45697C79.5812 5.17884 79.1473 5.03977 78.6578 5.03977C78.0793 5.03977 77.6009 5.18996 77.2226 5.49035C76.8444 5.7796 76.5941 6.19124 76.4717 6.72526Z" fill="black"/>
+                <path d="M88.911 5.40691H87.0253V8.87801C87.0253 9.16726 87.0976 9.37864 87.2422 9.51215C87.3868 9.64565 87.5982 9.72353 87.8764 9.74578C88.1545 9.75691 88.4994 9.75134 88.911 9.72909V11.6816C87.4313 11.8485 86.3856 11.7094 85.7737 11.2644C85.1729 10.8194 84.8725 10.0239 84.8725 8.87801V5.40691H83.4207V3.3376H84.8725V1.65211L87.0253 1.00128V3.3376H88.911V5.40691Z" fill="black"/>
+                <path d="M45.3287 3.104C46.2855 3.104 47.0475 3.41551 47.6149 4.03853C48.1934 4.66155 48.4827 5.49595 48.4827 6.54173V11.6816H46.33V6.69192C46.33 6.19128 46.2076 5.80189 45.9628 5.52376C45.7181 5.24563 45.3732 5.10656 44.9282 5.10656C44.4386 5.10656 44.0548 5.26788 43.7767 5.59051C43.5097 5.91315 43.3762 6.38041 43.3762 6.9923V11.6816H41.2234V6.69192C41.2234 6.19128 41.1011 5.80189 40.8563 5.52376C40.6115 5.24563 40.2667 5.10656 39.8216 5.10656C39.3433 5.10656 38.9594 5.26788 38.6702 5.59051C38.392 5.91315 38.253 6.38041 38.253 6.9923V11.6816H36.1002V3.33764H38.253V4.2221C38.7536 3.4767 39.5268 3.104 40.5726 3.104C41.5961 3.104 42.3527 3.50452 42.8422 4.30554C43.3984 3.50452 44.2273 3.104 45.3287 3.104Z" fill="black"/>
+                <path d="M16.2251 3.23866H18.3778V11.5827H16.2251V10.6481C15.7022 11.4269 14.8733 11.8163 13.7386 11.8163C12.8263 11.8163 12.0698 11.5103 11.469 10.8984C10.8794 10.2866 10.5845 9.44103 10.5845 8.36187V3.23866H12.7373V8.09486C12.7373 8.65113 12.8875 9.07946 13.1879 9.37984C13.4882 9.6691 13.8888 9.81373 14.3894 9.81373C14.9457 9.81373 15.3907 9.64128 15.7244 9.2964C16.0582 8.95151 16.2251 8.43419 16.2251 7.74442V3.23866Z" fill="black"/>
+                <path d="M25.1222 5.30797H23.2365V8.77907C23.2365 9.06833 23.3088 9.27971 23.4534 9.41322C23.5981 9.54672 23.8095 9.6246 24.0876 9.64685C24.3657 9.65797 24.7106 9.65241 25.1222 9.63016V11.5827C23.6426 11.7495 22.5968 11.6105 21.9849 11.1655C21.3841 10.7204 21.0837 9.92498 21.0837 8.77907V5.30797H19.6319V3.23866H21.0837V1.55318L23.2365 0.902344V3.23866H25.1222V5.30797Z" fill="black"/>
+                <path d="M2.22506 6.47198H0L0.270896 5.66682C0.844419 3.96218 2.52186 2.88187 4.31106 3.06485L4.51245 3.08941C5.29959 3.18541 6.02191 3.57374 6.53613 4.17738V3.27345H8.72642V11.4784H6.53613V10.5744C6.04644 11.1977 5.32898 11.6006 4.54194 11.6943L4.31106 11.7217C2.43156 11.8834 0.699645 10.6947 0.174694 8.88282L0 8.27985H2.22506C2.53827 9.13594 3.35281 9.70528 4.2644 9.70528H4.31106L4.511 9.68885C5.78809 9.58388 6.72282 8.43967 6.57089 7.16731L6.55159 7.04075C6.38273 5.93381 5.43081 5.11608 4.31106 5.11608H4.19929C3.32407 5.11608 2.53925 5.6551 2.22506 6.47198Z" fill="#1A76FC"/>
+                <path d="M52.0813 6.47198H49.8562L50.1271 5.66682C50.7006 3.96218 52.3781 2.88187 54.1673 3.06485L54.3686 3.08941C55.1558 3.18541 55.8781 3.57374 56.3923 4.17738V3.27345H58.5826V11.4784H56.3923V10.5744C55.9026 11.1977 55.1852 11.6006 54.3981 11.6943L54.1673 11.7217C52.2878 11.8834 50.5558 10.6947 50.0309 8.88282L49.8562 8.27985H52.0813C52.3945 9.13594 53.209 9.70528 54.1206 9.70528H54.1673L54.3672 9.68885C55.6443 9.58388 56.579 8.43967 56.4271 7.16731L56.4078 7.04075C56.2389 5.93381 55.287 5.11608 54.1673 5.11608H54.0555C53.1803 5.11608 52.3954 5.6551 52.0813 6.47198Z" fill="#1A76FC"/>
+                <path d="M28.2661 6.54727H26.041C26.4287 4.62943 28.0781 3.22575 30.0332 3.14982L30.2825 3.14014H30.3862C32.4099 3.14014 34.1542 4.56437 34.5588 6.54727H32.3338C32.0142 5.7803 31.2885 5.25995 30.4595 5.20343L30.2825 5.19137L29.9403 5.23699C29.1858 5.33759 28.5451 5.83906 28.2661 6.54727Z" fill="#1A76FC"/>
+                <path d="M28.231 8.39023H26.006C26.3936 10.3081 28.043 11.7118 29.9982 11.7877L30.2475 11.7974H30.3511C32.3749 11.7974 34.1191 10.3731 34.5238 8.39023H32.2987C31.9792 9.1572 31.2534 9.67755 30.4245 9.73407L30.2475 9.74613L29.9053 9.70051C29.1508 9.59991 28.51 9.09844 28.231 8.39023Z" fill="#1A76FC"/>
+                <path d="M90.4781 11.7038V10.1812L94.011 6.54486C94.7994 5.71707 95.1936 5.02724 95.1936 4.47538C95.1936 4.07133 95.0654 3.74613 94.8092 3.49976C94.5629 3.25339 94.2426 3.13021 93.8484 3.13021C93.0699 3.13021 92.4934 3.53425 92.1189 4.34234L90.4042 3.33716C90.7294 2.62762 91.1975 2.08561 91.8085 1.71113C92.4195 1.33665 93.0896 1.14941 93.8188 1.14941C94.755 1.14941 95.5582 1.44506 96.2283 2.03634C96.8984 2.61776 97.2335 3.40614 97.2335 4.40147C97.2335 5.47563 96.6668 6.57935 95.5335 7.71265L93.5084 9.73779H97.3961V11.7038H90.4781Z" fill="black"/>
+                <path d="M106.111 8.05263V9.94474H105.002V11.7038H102.948V9.94474H98.0547V8.05263L101.499 1.35636H103.687L100.257 8.05263H102.948V5.59881H105.002V8.05263H106.111Z" fill="black"/>
+            </svg>                
+        </a>
+
+        <div class="menu-holder ">
+            <nav>
+                <ul>
+                    <li><a href="">Otsi autosid</a></li>
+                    <li><a href="">Partnerid</a></li>
+                    <li><a href="">Kontaktid</a></li>
+                </ul>
+            </nav>
+
+            <div class="language">
+                <div class="current">
+                    <p>EST</p>
+                    <button type="button" class="icon-arrow-down"></button>
+                </div>
+                
+                <ul>
+                    <li><a href="">En</a></li>
+                    <li><a href="">Esl</a></li>
+                </ul>
+            </div>
+            
+
+        </div>
+        
+
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+
+<div class="main" id="main">
+
+    <section class="home-header">
+        <div class="container">
+            <h1>
+                Auto müük ja otsimine: <br> lihtne, kiire, tulus
+            </h1>
+            <div class="header-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur. Amet vitae velit dui ut posuere turpis amet.
+                </p>
+            </div>
+
+            <form action="" method="post">
+                <div class="form-top">
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="car" name="transport-type" value="car" checked>
+                        <label for="car">
+                            <span class="icon-car"></span>
+                        </label>
+                    </div>
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="moto" name="transport-type" value="moto">
+                        <label for="moto">
+                            <span class="icon-moto"></span>
+                        </label>
+                    </div>
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="ship" name="transport-type" value="ship">
+                        <label for="ship">
+                            <span class="icon-ship"></span>
+                        </label>
+                    </div>
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="bus" name="transport-type" value="bus">
+                        <label for="bus">
+                            <span class="icon-bus"></span>
+                        </label>
+                    </div>
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="truck" name="transport-type" value="truck">
+                        <label for="truck">
+                            <span class="icon-truck"></span>
+                        </label>
+                    </div>
+                    <div class="form-group radio-icon">
+                        <input type="radio" id="trailer" name="transport-type" value="trailer">
+                        <label for="trailer">
+                            <span class="icon-trailer"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="fields">
+                    <div class="form-group show-placeholder">
+                        <select name="" id="">
+                            <option value="-1">Keretüüp</option>
+                            <option value="0">Keretüüp - 1</option>
+                            <option value="1">Keretüüp - 2</option>
+                            <option value="2">Keretüüp - 3</option>
+                            <option value="3">Keretüüp - 4</option>
+                            <option value="4">Keretüüp - 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group show-placeholder">
+                        <select name="" id="">
+                            <option value="-1">Mark</option>
+                            <option value="0">Mark - 1</option>
+                            <option value="1">Mark - 2</option>
+                            <option value="2">Mark - 3</option>
+                            <option value="3">Mark - 4</option>
+                            <option value="4">Mark - 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group show-placeholder">
+                        <select name="" id="">
+                            <option value="-1">Mudelid</option>
+                            <option value="0">Mudelid - 1</option>
+                            <option value="1">Mudelid - 2</option>
+                            <option value="2">Mudelid - 3</option>
+                            <option value="3">Mudelid - 4</option>
+                            <option value="4">Mudelid - 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group show-placeholder">
+                        <select name="" id="">
+                            <option value="-1">Kütus</option>
+                            <option value="0">Kütus - 1</option>
+                            <option value="1">Kütus - 2</option>
+                            <option value="2">Kütus - 3</option>
+                            <option value="3">Kütus - 4</option>
+                            <option value="4">Kütus - 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Aasta alates">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Aasta kuni">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Hind alates">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Hind kuni">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="kW alates">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="kW kuni">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Läbisõit alates">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Läbisõit kuni">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Vedav sild">
+                    </div>
+                    <div class="form-group text">
+                        <input type="text" placeholder="Käigukast">
+                    </div>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" name="kaibemaksuga" id="kaibemaksuga">
+                    <label for="kaibemaksuga">Käibemaksuga</label>
+                </div>
+
+                <div class="btn-controls">
+                    <button type="submit" class="btn-primary">Tulemust</button>
+                    <button type="submit" class="btn-border">Detailsem otsing</button>
+                    <a href="" class="btn-link">Tühjenda filter</a>
+                </div>
+            </form>
+        </div>
+    </section>    
+
+
+    <section class="partners">
+        <div class="container">
+            <p class="partners-title">Meie partnerid</p>
+            <div class="imgs">
+                <picture>
+                    <source srcset="./img/components/partner-1.webp" type="image/webp">
+                    <img src="./img/components/partner-1.png" alt="" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./img/components/partner-2.webp" type="image/webp">
+                    <img src="./img/components/partner-2.png" alt="" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./img/components/partner-3.webp" type="image/webp">
+                    <img src="./img/components/partner-3.png" alt="" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./img/components/partner-4.webp" type="image/webp">
+                    <img src="./img/components/partner-4.png" alt="" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./img/components/partner-5.webp" type="image/webp">
+                    <img src="./img/components/partner-5.png" alt="" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <div class="home-about">
+        <div class="container">
+            <div class="left">
+                <h2 class="title">Meie kohta</h2>
+                <div class="desc">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Sed erat cum suspendisse amet neque duis. 
+                        Aenean ante tristique dictum adipiscing bibendum. Ante vitae dictumst tortor quisque. 
+                        Est et turpis iaculis duis pellentesque phasellus amet diam. 
+                        Augue facilisi egestas felis nam. Commodo volutpat aliquam eget ultricies blandit mauris arcu. 
+                        In praesent mauris aliquet gravida ultricies lacus nunc pharetra. 
+                        Quis sit fringilla urna non volutpat. Nisi platea vitae senectus euismod ut.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Vulputate odio ac quisque suspendisse et nisl. 
+                        Adipiscing risus at integer placerat ornare. Id gravida vel netus posuere quisque. 
+                        Convallis tristique ac diam mi faucibus dapibus amet vel.
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="img">
+                    <picture>
+                        <source srcset="./img/components/about-img-1.webp" type="image/webp">
+                        <img src="./img/components/about-img-1.jpg" alt="" loading="lazy">
+                    </picture>
+                </div>
+                <div class="stat">
+                    <p>+10 aastat </p>
+                    <p>kogemust</p>
+                </div>
+                <div class="img">
+                    <picture>
+                        <source srcset="./img/components/about-img-2.webp" type="image/webp">
+                        <img src="./img/components/about-img-2.jpg" alt="" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="how">
+        <div class="container">
+            <h2 class="title">Kuidas Automarket24 töötab</h2>
+
+            <div class="content">
+                <div class="img">
+                    <picture>
+                        <source srcset="./img/components/how-img.webp" type="image/webp">
+                        <img src="./img/components/how-img.jpg" alt="" loading="lazy">
+                    </picture>
+                </div>
+                <ul class="list">
+                    <li>
+                        <img src="./img/components/how-icon-1.svg" alt="" loading="lazy">
+                        <p class="list-title">Just need autod, mida soovite</p>
+                        <div class="list-text">
+                            <p>
+                                Automarket24 toetab laialdast atribuutide otsingu filtreerimist kütusetüübist salongi värvini. 
+                                Looge võrk kohapeal või kogu riigis.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/components/how-icon-2.svg" alt="" loading="lazy">
+                        <p class="list-title">Sirvi tulemusi</p>
+                        <div class="list-text">
+                            <p>
+                                Automarket24 pakub miljoneid kirjeid erinevatest allikatest. 
+                                Sirvige neid allika järgi või kõiki ühes loendis koos kõigi ootuspäraste sortimisvalikutega.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/components/how-icon-3.svg" alt="" loading="lazy">
+                        <p class="list-title">Otsige mis tahes seadmes</p>
+                        <div class="list-text">
+                            <p>
+                                Automarket24 töötab hästi teie brauseris – igas seadmes või iOS-i või Androidi rakendusena. 
+                                See tähendab, et saate oma telefonis, tahvelarvutis, sülearvutis või lauaarvutis kasutada 
+                                kõiki AutoTempesti võimsusi.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="reviews">
+        <div class="container">
+            <h2 class="title">Mida meie klient meie kohta räägib</h2>
+
+            <div class="swiper review-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide review-card">
+                        <div class="review-text">
+                            "Automarket24 on raskesti leitavate autode leidmisel väga abiks. 
+                            Väga mugav otsida paljudest allikatest korraga, et kuvada kena loend vaid ühe otsinguga."
+                        </div>
+                        <div class="reviewer">
+                            <picture>
+                                <source srcset="./img/components/reviewer-1.webp" type="image/webp">
+                                <img src="./img/components/reviewer-1.jpg" alt="" loading="lazy">
+                            </picture>
+                            
+                            <p class="name">Greg Smith</p>
+                            <p class="position">Atlanta, GA</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide review-card">
+                        <div class="review-text">
+                            "Teie veebisait on suurepärane ressurss ja järgmine kord, kui ma sõidukit otsin, 
+                            teen kindlasti Automarket24 oma esimeseks (ja viimaseks) kohaks, mida otsida."
+                        </div>
+                        <div class="reviewer">
+                            <picture>
+                                <source srcset="./img/components/reviewer-2.webp" type="image/webp">
+                                <img src="./img/components/reviewer-2.jpg" alt="" loading="lazy">
+                            </picture>
+                            
+                            <p class="name">Anna Harris </p>
+                            <p class="position">Bay Village, OH</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide review-card">
+                        <div class="review-text">
+                            "Automarket24 aitas mul leida otsitava maasturi. Säästsin aega AutoTempesti 
+                            kasutamisega võrreldes üksikute automüüjate veebisaitide külastamisega."
+                        </div>
+                        <div class="reviewer">
+                            <picture>
+                                <source srcset="./img/components/reviewer-3.webp" type="image/webp">
+                                <img src="./img/components/reviewer-3.jpg" alt="" loading="lazy">
+                            </picture>
+                            
+                            <p class="name">Sam Wither</p>
+                            <p class="position">Atlanta, GA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+             <div class="swiper-arrows">
+                <div class="swiper-arrow swiper-arrow-prev review-prev">
+                    <span class="icon-arrow-prev"></span>
+                </div>
+                <div class="swiper-arrow swiper-arrow-next review-next">
+                    <span class="icon-arrow-next"></span>
+                </div>
+             </div>
+            
+        </div>
+    </div>
+
+
+    <div class="about-banner">
+        <div class="container">
+            <div class="text">
+                <p>Tänu meie koostööpartneritele leiate kiiresti ja lihtsalt iga auto</p>
+            </div>
+            <a href="" class="btn-primary bg-white">Otsige autot</a>
+        </div>
+    </div>
+    
+    
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="footer-top">
+            <ul>
+                <li><a href="">Otsi autosid</a></li>
+                <li><a href="">Partnerid</a></li>
+                <li><a href="">Kontaktid</a></li>
+            </ul>
+            <div class="contacts">
+                <a href="" class="icon-facebook"></a>
+                <a href="mailto:automarket24@example" class="icon-email">
+                    automarket24@example
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <a href="./home.html" class="logo">
+                <svg width="107" height="12" viewBox="0 0 107 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M62.7257 4.77276C62.926 4.23875 63.2542 3.83824 63.7103 3.57123C64.1776 3.30422 64.6949 3.17072 65.2623 3.17072V5.57379C64.6059 5.49591 64.0163 5.62941 63.4934 5.9743C62.9816 6.31918 62.7257 6.89214 62.7257 7.69316V11.6816H60.573V3.3376H62.7257V4.77276Z" fill="black"/>
+                    <path d="M74.2145 11.6816H71.7113L68.6741 7.89341V11.6816H66.5214V0H68.6741V7.00895L71.5444 3.3376H74.1144L70.7601 7.45953L74.2145 11.6816Z" fill="black"/>
+                    <path d="M76.5051 8.39405C76.7943 9.43983 77.5787 9.96272 78.8581 9.96272C79.6813 9.96272 80.3044 9.68459 80.7271 9.12833L82.4627 10.1296C81.6394 11.32 80.4267 11.9152 78.8247 11.9152C77.4452 11.9152 76.3382 11.498 75.5038 10.6636C74.6694 9.82922 74.2522 8.77788 74.2522 7.50959C74.2522 6.25243 74.6638 5.20665 75.4871 4.37225C76.3104 3.52673 77.3673 3.10396 78.6578 3.10396C79.8816 3.10396 80.8884 3.52673 81.6783 4.37225C82.4794 5.21778 82.8799 6.26356 82.8799 7.50959C82.8799 7.78772 82.8521 8.08255 82.7964 8.39405H76.5051ZM76.4717 6.72526H80.7271C80.6047 6.15787 80.3489 5.7351 79.9595 5.45697C79.5812 5.17884 79.1473 5.03977 78.6578 5.03977C78.0793 5.03977 77.6009 5.18996 77.2226 5.49035C76.8444 5.7796 76.5941 6.19124 76.4717 6.72526Z" fill="black"/>
+                    <path d="M88.911 5.40691H87.0253V8.87801C87.0253 9.16726 87.0976 9.37864 87.2422 9.51215C87.3868 9.64565 87.5982 9.72353 87.8764 9.74578C88.1545 9.75691 88.4994 9.75134 88.911 9.72909V11.6816C87.4313 11.8485 86.3856 11.7094 85.7737 11.2644C85.1729 10.8194 84.8725 10.0239 84.8725 8.87801V5.40691H83.4207V3.3376H84.8725V1.65211L87.0253 1.00128V3.3376H88.911V5.40691Z" fill="black"/>
+                    <path d="M45.3287 3.104C46.2855 3.104 47.0475 3.41551 47.6149 4.03853C48.1934 4.66155 48.4827 5.49595 48.4827 6.54173V11.6816H46.33V6.69192C46.33 6.19128 46.2076 5.80189 45.9628 5.52376C45.7181 5.24563 45.3732 5.10656 44.9282 5.10656C44.4386 5.10656 44.0548 5.26788 43.7767 5.59051C43.5097 5.91315 43.3762 6.38041 43.3762 6.9923V11.6816H41.2234V6.69192C41.2234 6.19128 41.1011 5.80189 40.8563 5.52376C40.6115 5.24563 40.2667 5.10656 39.8216 5.10656C39.3433 5.10656 38.9594 5.26788 38.6702 5.59051C38.392 5.91315 38.253 6.38041 38.253 6.9923V11.6816H36.1002V3.33764H38.253V4.2221C38.7536 3.4767 39.5268 3.104 40.5726 3.104C41.5961 3.104 42.3527 3.50452 42.8422 4.30554C43.3984 3.50452 44.2273 3.104 45.3287 3.104Z" fill="black"/>
+                    <path d="M16.2251 3.23866H18.3778V11.5827H16.2251V10.6481C15.7022 11.4269 14.8733 11.8163 13.7386 11.8163C12.8263 11.8163 12.0698 11.5103 11.469 10.8984C10.8794 10.2866 10.5845 9.44103 10.5845 8.36187V3.23866H12.7373V8.09486C12.7373 8.65113 12.8875 9.07946 13.1879 9.37984C13.4882 9.6691 13.8888 9.81373 14.3894 9.81373C14.9457 9.81373 15.3907 9.64128 15.7244 9.2964C16.0582 8.95151 16.2251 8.43419 16.2251 7.74442V3.23866Z" fill="black"/>
+                    <path d="M25.1222 5.30797H23.2365V8.77907C23.2365 9.06833 23.3088 9.27971 23.4534 9.41322C23.5981 9.54672 23.8095 9.6246 24.0876 9.64685C24.3657 9.65797 24.7106 9.65241 25.1222 9.63016V11.5827C23.6426 11.7495 22.5968 11.6105 21.9849 11.1655C21.3841 10.7204 21.0837 9.92498 21.0837 8.77907V5.30797H19.6319V3.23866H21.0837V1.55318L23.2365 0.902344V3.23866H25.1222V5.30797Z" fill="black"/>
+                    <path d="M2.22506 6.47198H0L0.270896 5.66682C0.844419 3.96218 2.52186 2.88187 4.31106 3.06485L4.51245 3.08941C5.29959 3.18541 6.02191 3.57374 6.53613 4.17738V3.27345H8.72642V11.4784H6.53613V10.5744C6.04644 11.1977 5.32898 11.6006 4.54194 11.6943L4.31106 11.7217C2.43156 11.8834 0.699645 10.6947 0.174694 8.88282L0 8.27985H2.22506C2.53827 9.13594 3.35281 9.70528 4.2644 9.70528H4.31106L4.511 9.68885C5.78809 9.58388 6.72282 8.43967 6.57089 7.16731L6.55159 7.04075C6.38273 5.93381 5.43081 5.11608 4.31106 5.11608H4.19929C3.32407 5.11608 2.53925 5.6551 2.22506 6.47198Z" fill="#1A76FC"/>
+                    <path d="M52.0813 6.47198H49.8562L50.1271 5.66682C50.7006 3.96218 52.3781 2.88187 54.1673 3.06485L54.3686 3.08941C55.1558 3.18541 55.8781 3.57374 56.3923 4.17738V3.27345H58.5826V11.4784H56.3923V10.5744C55.9026 11.1977 55.1852 11.6006 54.3981 11.6943L54.1673 11.7217C52.2878 11.8834 50.5558 10.6947 50.0309 8.88282L49.8562 8.27985H52.0813C52.3945 9.13594 53.209 9.70528 54.1206 9.70528H54.1673L54.3672 9.68885C55.6443 9.58388 56.579 8.43967 56.4271 7.16731L56.4078 7.04075C56.2389 5.93381 55.287 5.11608 54.1673 5.11608H54.0555C53.1803 5.11608 52.3954 5.6551 52.0813 6.47198Z" fill="#1A76FC"/>
+                    <path d="M28.2661 6.54727H26.041C26.4287 4.62943 28.0781 3.22575 30.0332 3.14982L30.2825 3.14014H30.3862C32.4099 3.14014 34.1542 4.56437 34.5588 6.54727H32.3338C32.0142 5.7803 31.2885 5.25995 30.4595 5.20343L30.2825 5.19137L29.9403 5.23699C29.1858 5.33759 28.5451 5.83906 28.2661 6.54727Z" fill="#1A76FC"/>
+                    <path d="M28.231 8.39023H26.006C26.3936 10.3081 28.043 11.7118 29.9982 11.7877L30.2475 11.7974H30.3511C32.3749 11.7974 34.1191 10.3731 34.5238 8.39023H32.2987C31.9792 9.1572 31.2534 9.67755 30.4245 9.73407L30.2475 9.74613L29.9053 9.70051C29.1508 9.59991 28.51 9.09844 28.231 8.39023Z" fill="#1A76FC"/>
+                    <path d="M90.4781 11.7038V10.1812L94.011 6.54486C94.7994 5.71707 95.1936 5.02724 95.1936 4.47538C95.1936 4.07133 95.0654 3.74613 94.8092 3.49976C94.5629 3.25339 94.2426 3.13021 93.8484 3.13021C93.0699 3.13021 92.4934 3.53425 92.1189 4.34234L90.4042 3.33716C90.7294 2.62762 91.1975 2.08561 91.8085 1.71113C92.4195 1.33665 93.0896 1.14941 93.8188 1.14941C94.755 1.14941 95.5582 1.44506 96.2283 2.03634C96.8984 2.61776 97.2335 3.40614 97.2335 4.40147C97.2335 5.47563 96.6668 6.57935 95.5335 7.71265L93.5084 9.73779H97.3961V11.7038H90.4781Z" fill="black"/>
+                    <path d="M106.111 8.05263V9.94474H105.002V11.7038H102.948V9.94474H98.0547V8.05263L101.499 1.35636H103.687L100.257 8.05263H102.948V5.59881H105.002V8.05263H106.111Z" fill="black"/>
+                </svg>   
+            </a>
+            <p class="text">
+                © 2024 Automarket24 <br> All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="/cdn/js/swiper-bundle.min.js" ></script>
+<script src="/js/components.js?v=002"></script>
+</body>
+</html>
