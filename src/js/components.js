@@ -51,6 +51,38 @@ window.addEventListener('load', () => {
         }
     }
 
+    // Show more
+    if(document.querySelectorAll('.js-btn-show-more').length > 0){
+        document.querySelectorAll('.js-btn-show-more').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parent = btn.closest('.js-parent-show-more');
+                console.log(parent);
+                
+                if (parent) {
+                    const elemsHolder = parent.querySelectorAll('[data-holder]');
+
+                    elemsHolder.forEach(elem => {
+                        if (elem.classList.contains('hide')) {
+                            elem.classList.remove('hide');
+                        }else{
+                            elem.classList.add('hide');    
+                        }
+                    })
+
+                    
+                    const btntText = btn.dataset.text;
+                    btn.dataset.text = btn.textContent;
+                    btn.innerHTML = btntText;
+                    
+                    if (btn.closest('.js-accordion')) {
+                        recalcAccordionHeight(btn.closest('.js-accordion'));
+                    }
+                    
+                }
+            })
+        })
+    }
+
 
 })
 
@@ -839,11 +871,31 @@ if (selects.length > 0) {
 // Home review
 if (document.querySelector('.review-swiper')) {
     new Swiper('.review-swiper', {
-        spaceBetween: 20,
         speed: 500,
         navigation: {
             nextEl: '.review-next',
             prevEl: '.review-prev',
-          },
+        },
+        breakpoints: {
+            320: {
+                spaceBetween: 20,
+                slidesPerView: 1,
+            },
+            1024: {
+                spaceBetween: 30,
+                slidesPerView: 2,
+            }
+        }
+    })
+}
+
+
+// Show hidden menu
+if (document.querySelector('.js-show-menu')) {
+    document.querySelectorAll('.js-show-menu').forEach(btn => {
+        btn.addEventListener('click', () => {
+            header.classList.toggle('show-hidden-menu');
+            bodyLockToggle();
+        })
     })
 }
