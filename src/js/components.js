@@ -31,6 +31,12 @@ window.addEventListener('load', () => {
             if (btn) {
                 btn.addEventListener('click', () => {
                     item.classList.toggle('active');
+                    if (item.querySelector('.js-accordion')) {
+                        console.log(item.querySelectorAll('.js-accordion'));
+                        item.querySelectorAll('.js-accordion').forEach(item => {
+                            recalcAccordionHeight(item);
+                        })
+                    }
                 })
             }
 
