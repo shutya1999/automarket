@@ -75,6 +75,13 @@ input, button, textarea, select
 .custom-scrollbar
   @include scrollbar-styling
 
+@keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+    
+
 h1
   font-size: 30px
   font-weight: 500
@@ -1238,6 +1245,7 @@ footer
       width: 100%
       max-width: 100%
       border-radius: 20px
+      animation: fade-in .5s .3ms
 
 
 .partner-list
