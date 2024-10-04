@@ -813,3 +813,28 @@ if (document.querySelector('.js-show-menu')) {
     });
   });
 }
+
+// Initial default select2
+$(document).ready(function () {
+  if (document.querySelectorAll('.js-select2').length > 0) {
+    document.querySelectorAll('.js-select2').forEach(function (select2) {
+      var params = {
+        minimumResultsForSearch: -1,
+        dropdownCssClass: 'test-4'
+      };
+      if (select2.dataset.placeholder !== undefined && select2.dataset.placeholder !== null) {
+        params.placeholder = select2.dataset.placeholder;
+      }
+      if (select2.dataset.search !== undefined && select2.dataset.search !== null) {
+        params.minimumResultsForSearch = 0;
+      }
+      if (select2.dataset.customTheme !== undefined && select2.dataset.customTheme !== null && select2.dataset.customTheme.trim() !== '') {
+        params.dropdownCssClass = select2.dataset.customTheme;
+      }
+      $(select2).select2(params);
+      if (select2.nextElementSibling && select2.dataset.customTheme !== undefined && select2.dataset.customTheme !== null && select2.dataset.customTheme.trim() !== '') {
+        select2.nextElementSibling.classList.add(select2.dataset.customTheme);
+      }
+    });
+  }
+});
