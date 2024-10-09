@@ -836,5 +836,73 @@ $(document).ready(function () {
         select2.nextElementSibling.classList.add(select2.dataset.customTheme);
       }
     });
+    $('.js-select2').on('select2:select', function (event) {
+      event.target.dispatchEvent(new Event("change"));
+    });
+    $('.js-select2').on('select2:unselect', function (event) {
+      event.target.dispatchEvent(new Event("change"));
+    });
   }
 });
+function debounce(func) {
+  var _this = this;
+  var timeout = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 300;
+  var timer;
+  return function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      func.apply(_this, args);
+    }, timeout);
+  };
+}
+
+// catalog btn apply filters
+if (document.querySelector('.filters form')) {
+  var form = document.querySelector('.filters form'),
+    inputs = form.querySelectorAll('input'),
+    _selects = form.querySelectorAll('select');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+  });
+  var debouncedCatalogBtnApplyPosition = debounce(function (formGroup) {
+    catalogBtnApplyPosition(formGroup);
+  }, 300);
+  inputs.forEach(function (input) {
+    input.addEventListener('input', function () {
+      if (input.closest('.form-group, .field-diapason')) {
+        // console.log(input.closest('.form-group, .field-diapason'));
+
+        if (input.type === 'checkbox' || input.type === 'radio') {
+          console.log(input.closest('.form-group'));
+          catalogBtnApplyPosition(input.closest('.form-group'), 22);
+        } else {
+          debouncedCatalogBtnApplyPosition(input.closest('.form-group, .field-diapason'));
+        }
+      }
+    });
+  });
+  _selects.forEach(function (select) {
+    select.addEventListener('change', function () {
+      if (select.closest('.form-group')) {
+        catalogBtnApplyPosition(select.closest('.form-group'));
+      }
+    });
+  });
+}
+function catalogBtnApplyPosition(block) {
+  var additionalOffset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  var btn = document.querySelector('.js-btn-apply-filters');
+  var form = document.querySelector('.filters form');
+  if (btn && block) {
+    btn.classList.add('active');
+    var blockPos = block.getBoundingClientRect();
+    var formPos = form.getBoundingClientRect();
+    console.log(blockPos);
+    var top = blockPos.top - formPos.top - blockPos.height / 2 + btn.clientHeight / 2 - additionalOffset;
+    console.log(top);
+    btn.style.setProperty('--top', "".concat(top, "px"));
+  }
+}

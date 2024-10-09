@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
         document.documentElement.style.setProperty('--vw', `${vw}px`);
     });
 
-    if (header){
+    if (header) {
         document.documentElement.style.setProperty('--header-height', `${header.clientHeight}px`);
     }
 
@@ -58,32 +58,32 @@ window.addEventListener('load', () => {
     }
 
     // Show more
-    if(document.querySelectorAll('.js-btn-show-more').length > 0){
+    if (document.querySelectorAll('.js-btn-show-more').length > 0) {
         document.querySelectorAll('.js-btn-show-more').forEach(btn => {
             btn.addEventListener('click', () => {
                 const parent = btn.closest('.js-parent-show-more');
                 console.log(parent);
-                
+
                 if (parent) {
                     const elemsHolder = parent.querySelectorAll('[data-holder]');
 
                     elemsHolder.forEach(elem => {
                         if (elem.classList.contains('hide')) {
                             elem.classList.remove('hide');
-                        }else{
-                            elem.classList.add('hide');    
+                        } else {
+                            elem.classList.add('hide');
                         }
                     })
 
-                    
+
                     const btntText = btn.dataset.text;
                     btn.dataset.text = btn.textContent;
                     btn.innerHTML = btntText;
-                    
+
                     if (btn.closest('.js-accordion')) {
                         recalcAccordionHeight(btn.closest('.js-accordion'));
                     }
-                    
+
                 }
             })
         })
@@ -118,9 +118,9 @@ btns_anchor.forEach(btn => {
         let url = new URL(href);
         href = url.hash;
 
-        if (href !== ''){
+        if (href !== '') {
             const target = document.querySelector(`${href}`);
-            if (target){
+            if (target) {
                 const topOffset = target.offsetTop - document.querySelector('header').clientHeight;
                 window.scrollTo({
                     top: topOffset,
@@ -131,10 +131,10 @@ btns_anchor.forEach(btn => {
                     removeClass(btn.closest('nav').querySelectorAll('._js-anchor'), 'active');
                     btn.classList.add('active');
                 }
-            }else {
+            } else {
                 window.location.href = btn.href;
             }
-        }else {
+        } else {
             window.location.href = btn.href;
         }
     })
@@ -606,7 +606,7 @@ function validateField(form_group, valid_type) {
                 result = true;
             }
 
-            
+
 
             break;
         }
@@ -621,7 +621,7 @@ function validateField(form_group, valid_type) {
                 helpBock.innerHTML = helpBock.dataset.empty;
                 result = false;
             }
-            
+
 
             break;
         }
@@ -635,7 +635,7 @@ function validateField(form_group, valid_type) {
                 helpBock.innerHTML = helpBock.dataset.empty;
                 result = false;
             }
-            
+
 
             break;
         }
@@ -656,7 +656,7 @@ function validateField(form_group, valid_type) {
                 form_group.classList.remove('has-error');
                 result = true;
             }
-            
+
 
             break;
         }
@@ -772,7 +772,7 @@ function validateForm(form) {
         }
 
     });
-    
+
 
     if (errors === 0) {
         return true;
@@ -907,7 +907,7 @@ if (document.querySelector('.js-show-menu')) {
 }
 
 // Initial default select2
-$(document).ready(function() {
+$(document).ready(function () {
     if (document.querySelectorAll('.js-select2').length > 0) {
         document.querySelectorAll('.js-select2').forEach(select2 => {
             let params = {
@@ -918,22 +918,103 @@ $(document).ready(function() {
             if (select2.dataset.placeholder !== undefined && select2.dataset.placeholder !== null) {
                 params.placeholder = select2.dataset.placeholder;
             }
-            
+
             if (select2.dataset.search !== undefined && select2.dataset.search !== null) {
                 params.minimumResultsForSearch = 0;
             }
 
             if (select2.dataset.customTheme !== undefined && select2.dataset.customTheme !== null && select2.dataset.customTheme.trim() !== '') {
                 params.dropdownCssClass = select2.dataset.customTheme;
-            }      
-            
-            $(select2).select2(params);     
+            }
+
+            $(select2).select2(params);
 
             if (select2.nextElementSibling && select2.dataset.customTheme !== undefined && select2.dataset.customTheme !== null && select2.dataset.customTheme.trim() !== '') {
                 select2.nextElementSibling.classList.add(select2.dataset.customTheme);
-            }      
+            }
+
         })
-        
+
+        $('.js-select2').on('select2:select', function (event) {
+            event.target.dispatchEvent(new Event("change"));
+        });
+        $('.js-select2').on('select2:unselect', function (event) {
+            event.target.dispatchEvent(new Event("change"));
+        });
+
     }
-    
+
 });
+
+function debounce(func, timeout = 300) {
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
+}
+
+
+
+// catalog btn apply filters
+if (document.querySelector('.filters form')) {
+    const form = document.querySelector('.filters form'),
+        inputs = form.querySelectorAll('input'),
+        selects = form.querySelectorAll('select');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    })
+
+    const debouncedCatalogBtnApplyPosition = debounce((formGroup) => {
+        catalogBtnApplyPosition(formGroup);
+    }, 300);
+
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if (input.closest('.form-group, .field-diapason')) {
+                // console.log(input.closest('.form-group, .field-diapason'));
+                
+
+                if (input.type === 'checkbox' || input.type === 'radio') {
+                    console.log(input.closest('.form-group'));
+                    
+                    catalogBtnApplyPosition(input.closest('.form-group'), 22);
+                }else{
+                    debouncedCatalogBtnApplyPosition(input.closest('.form-group, .field-diapason'));
+                }
+                
+                
+            }
+        })
+    })
+    selects.forEach(select => {
+        select.addEventListener('change', () => {
+            if (select.closest('.form-group')) {
+                catalogBtnApplyPosition(select.closest('.form-group'));
+            }
+        })
+    })
+}
+function catalogBtnApplyPosition(block, additionalOffset = 0) {
+    const btn = document.querySelector('.js-btn-apply-filters');
+    const form = document.querySelector('.filters form');
+
+    if (btn && block) {
+        btn.classList.add('active');
+        let blockPos = block.getBoundingClientRect();
+        let formPos = form.getBoundingClientRect();
+
+        console.log(blockPos);
+        
+
+
+        let top = (((blockPos.top - formPos.top) - (blockPos.height / 2)) + (btn.clientHeight / 2)) - additionalOffset
+
+        console.log(top);
+        
+        
+
+        btn.style.setProperty('--top', `${top}px`);
+    }
+}

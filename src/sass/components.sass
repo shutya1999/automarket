@@ -1339,6 +1339,20 @@ footer
           border: none
         & .filter-item
           margin: 0 -20px
+
+    & .btn-controls
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      position: sticky
+      bottom: 0
+      background-color: white
+      z-index: 2
+      padding: 10px 0 0 0
+      & .btn
+        border-radius: 0px
+        text-transform: none
+        text-decoration: none
+
           
         
 
@@ -1512,7 +1526,7 @@ footer
             & a
               color: white
               &:hover
-                color: black
+                // color: black
 
 
 
@@ -2007,10 +2021,41 @@ footer
       & .filters-content
         display: block !important
         opacity: 1 !important
+        position: relative
         & .filter-item
           padding: 20px 0
           & .filter-item
             margin: 0
+
+      & .btn-controls
+        position: absolute
+        left: calc(100% + 23px)
+        top: var(--top)
+        opacity: 0
+        height: auto
+        bottom: auto
+        background: none
+        pointer-events: none
+        transition: all .3s
+        transform: translateY(-4px)
+        &.active
+          opacity: 1
+          pointer-events: auto
+        & .btn-link
+          display: none
+        & .btn-primary
+          background: none
+          background-color: rgba(0,0,0,0)
+          width: 131px
+          height: 35px
+          border: none
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='129' height='35' viewBox='0 0 129 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.9662 3.01937C16.721 1.39949 19.0216 0.5 21.4098 0.5H111.5C120.889 0.5 128.5 8.11116 128.5 17.5C128.5 26.8888 120.889 34.5 111.5 34.5H21.247C18.9518 34.5 16.7342 33.6691 15.0042 32.1608L2.52969 21.2856C0.511139 19.5259 0.466786 16.4034 2.43454 14.587L14.9662 3.01937Z' fill='%231A76FC' stroke='white'/%3E%3C/svg%3E")
+          background-repeat: no-repeat
+          background-size: contain
+          padding: 0
+          &:hover
+            color: white
+        
 
 
     & .content
